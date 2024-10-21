@@ -6,6 +6,9 @@
 		<include name="smoke test"></include>
 	</run>
 </groups>
+<listeners>
+<listener class-name="com.comcast.crm.generic.listenerutility.ListenerImpCls"></listener>
+</listeners>
   <test  name="Test">
     <classes>
       <class name="com.comcast.crm.contactTest.CreateContactTest"/>

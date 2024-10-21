@@ -16,7 +16,7 @@ import com.comcast.crm.objectRepositryutility.CreateNewOrganizationPage;
 import com.comcast.crm.objectRepositryutility.HomePage;
 import com.comcast.crm.objectRepositryutility.OrganizationInfo;
 import com.comcast.crm.objectRepositryutility.OrganizationPage;
-@Listeners(com.comcast.crm.generic.listenerutility.ListenerImpCls.class)
+//@Listeners(com.comcast.crm.generic.listenerutility.ListenerImpCls.class)
 public class CreateContactTest extends BaseClass {
 	@Test(groups ={"smoke test","regression test"})
 	public void createContactTest() throws EncryptedDocumentException, IOException {

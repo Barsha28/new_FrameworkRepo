@@ -38,7 +38,7 @@ public class BaseClass {
 	}
 
 	// @Parameters("Browser")
-	@BeforeClass(groups = { "smoke test", "regression test" })
+	@BeforeClass(groups = { "smoke test", "reg ression test" })
 //	public void configBC(String browser) throws IOException {
 	public void configBC() throws IOException {
 
