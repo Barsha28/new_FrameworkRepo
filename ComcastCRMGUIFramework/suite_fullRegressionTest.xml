@@ -7,6 +7,7 @@
 		<include name="regression test"></include>
 	</run>
 </groups>
+
   <test name="Test">
     <classes>
       <class name="com.comcast.crm.contactTest.CreateContactTest"/>
