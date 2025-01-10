@@ -24,6 +24,9 @@ private WebElement contactLink;
 @FindBy(linkText = "Campaigns")
 private WebElement campaignLink;
 
+@FindBy(linkText="Purchase Order")
+private WebElement NavPurchaseOrdLink;
+
 
 @FindBy(linkText="More")
 private WebElement moreLink;
@@ -39,6 +42,9 @@ public WebElement getNavOrgLink() {
 }
 public WebElement getNavProductLink() {
 	return NavProductLink;
+}
+public WebElement getNavPurchaseOdrLink() {
+	return NavPurchaseOrdLink;
 }
 
 public WebElement getContactLink() {

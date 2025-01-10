@@ -31,14 +31,14 @@ public class BaseClass {
 	public WebDriver driver = null;
 	public static WebDriver sdriver = null;
 
-	@BeforeSuite(groups = { "smoke test", "reg ression test" })
+	@BeforeSuite(groups = { "smoke test", "regression test" })
 	public void configBS() throws SQLException {
 		System.out.println("===connect to DB , Report config===");
 		dblib.getDbConnection();
 	}
 
 	// @Parameters("Browser")
-	@BeforeClass(groups = { "smoke test", "reg ression test" })
+	@BeforeClass(groups = { "smoke test", "regression test" })
 //	public void configBC(String browser) throws IOException {
 	public void configBC() throws IOException {
 

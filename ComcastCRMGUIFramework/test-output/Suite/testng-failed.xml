@@ -5,18 +5,23 @@
     <listener class-name="com.comcast.crm.generic.listenerutility.ListenerImpCls"/>
   </listeners>
   <test thread-count="5" name="Test(failed)">
+    <groups>
+      <run>
+        <include name="regression test"/>
+      </run>
+    </groups>
     <classes>
-      <class name="com.comcast.crm.orgtest.CreateOrganizationTest">
+      <class name="com.comcast.crm.contactTest.CreateContactTest">
         <methods>
+          <include name="createContactWithSupportDateTest"/>
           <include name="configAC"/>
           <include name="configAS"/>
-          <include name="configBC"/>
-          <include name="configBS"/>
+          <include name="createContactTest"/>
           <include name="configAM"/>
-          <include name="createOrganizationWithMandatoryTest"/>
+          <include name="createContactWithOrgTest"/>
           <include name="configBM"/>
         </methods>
-      </class> <!-- com.comcast.crm.orgtest.CreateOrganizationTest -->
+      </class> <!-- com.comcast.crm.contactTest.CreateContactTest -->
     </classes>
   </test> <!-- Test(failed) -->
 </suite> <!-- Failed suite [Suite] -->

@@ -28,14 +28,19 @@ public void waitForElementPresent(WebDriver driver,WebElement element) {
 }
 public void switchToBrowserTabOnUrl(WebDriver driver,String partialUrl) {
 	Set<String>set=driver.getWindowHandles();
-	Iterator<String>it=set.iterator();
-	while(it.hasNext()) {
-		String windowId=it.next();
-		driver.switchTo().window(windowId);
-		String actUrl=driver.getCurrentUrl();
+	for(String ids:set) {
+		String actUrl=driver.switchTo().window(ids).getCurrentUrl();
 		if(actUrl.contains(partialUrl)) {
 			break;
 		}
+//	Iterator<String>it=set.iterator();
+//	while(it.hasNext()) {
+//		String windowId=it.next();
+//		driver.switchTo().window(windowId);
+//		String actUrl=driver.getCurrentUrl();
+//		if(actUrl.contains(partialUrl)) {
+//			break;
+//		}
 	}
 }
 	public void switchToBrowserTabOnTitle(WebDriver driver,String partialTitle) {
@@ -93,4 +98,5 @@ public void switchToBrowserTabOnUrl(WebDriver driver,String partialUrl) {
 		TakesScreenshot ts = (TakesScreenshot) BaseClass.sdriver;
 		return ts.getScreenshotAs(OutputType.BASE64);
 	}
+	
 }

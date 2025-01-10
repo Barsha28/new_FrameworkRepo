@@ -11,6 +11,7 @@ import org.apache.poi.ss.usermodel.WorkbookFactory;
 public class ExcelUtility {
 	public String getDataFromExcel(String sheetName, int rowNum, int cellNum)
 			throws EncryptedDocumentException, IOException {
+		//FileInputStream fis = new FileInputStream("./testdata/Testscriptdata.xlsx");
 		FileInputStream fis = new FileInputStream("./testdata/Testscriptdata.xlsx");
 		Workbook wb = WorkbookFactory.create(fis);
 		String data = wb.getSheet(sheetName).getRow(rowNum).getCell(cellNum).toString();
@@ -25,10 +26,10 @@ public class ExcelUtility {
 		wb.close();
 		return rowcount;
 	}
-	public int getCellCount(String sheetName,int rowNum) throws EncryptedDocumentException, IOException {
+	public int getCellCount(String sheetName) throws EncryptedDocumentException, IOException {
 		FileInputStream fis = new FileInputStream("./testdata/Testscriptdata.xlsx");
 		Workbook wb = WorkbookFactory.create(fis);
-		int cellcount = wb.getSheet(sheetName).getRow(rowNum).getLastCellNum();
+		int cellcount = wb.getSheet(sheetName).getRow(1).getLastCellNum();
 		wb.close();
 		return cellcount;
 	}
